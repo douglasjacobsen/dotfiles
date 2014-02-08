@@ -99,3 +99,6 @@ nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gb :Gblame<CR>
 
+" Git gutter mappings (git diff plugin)
+nnoremap <leader>ggt :GitGutterToggle<CR>
+nnoremap <leader>ggl :GitGutterLineHighlightsToggle<CR>
