@@ -88,5 +88,14 @@ inoremap <F4> <C-R>=strftime("%x")<CR>
 
 set laststatus=2
 
+"Vundle mappings
 nnoremap <leader>bc :BundleClean<CR>
 nnoremap <leader>bi :BundleInstall<CR>
+
+" Fugitive mappings (git plugin)
+nnoremap <leader>gl :Glog --graph --oneline --abbrev-commit --decorate<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gb :Gblame<CR>
+
