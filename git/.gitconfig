@@ -32,3 +32,5 @@
 	default = current
 [http]
 	proxy = 
+[rerere]
+	enabled = 1
