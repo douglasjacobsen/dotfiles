@@ -48,3 +48,5 @@ Bundle 'git@github.com:douglasjacobsen/vim-bufexplorer.git'
 
 Bundle 'git@github.com:mattn/webapi-vim'
 Bundle 'git@github.com:christoomey/vim-tmux-navigator.git'
+
+Bundle 'git@github.com:vim-scripts/vim-gista.git'
