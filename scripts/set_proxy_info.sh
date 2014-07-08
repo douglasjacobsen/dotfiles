@@ -32,11 +32,8 @@ case $WORKIP in
  		cp ~/.subversion/servers.lanl ~/.subversion/servers
  		cp /etc/apt/apt.conf.lanl /etc/apt/apt.conf
  		git config --global http.proxy $http_proxy
-		gconftool-2 -t string -s /system/proxy/mode "manual"
-		gconftool-2 -t string -s /system/http_proxy/host "127.0.0.1"
-		gconftool-2 -t int -s /system/http_proxy/port 23000
-		gconftool-2 -t bool -s /system/http_proxy/use_http_proxy true
-		cp ~/.purple/prefs.xml.lanl ~/.purple/prefs.xml
+		gsettings set org.gnome.system.proxy mode 'auto'
+		gsettings set org.gnome.system.proxy autoconfig-url 'http://wpad.lanl.gov/wpad.dat'
  		;;
  	*) unset http_proxy
  		unset https_proxy
@@ -46,9 +43,7 @@ case $WORKIP in
 		cp ~/.subversion/servers.nolanl ~/.subversion/servers
  		cp /etc/apt/apt.conf.nolanl /etc/apt/apt.conf
  		git config --global http.proxy ""
-		gconftool-2 -t string -s /system/proxy/mode "none"
-		gconftool-2 -t bool -s /system/http_proxy/use_http_proxy false
-		cp ~/.purple/prefs.xml.nolanl ~/.purple/prefs.xml
+		gsettings set org.gnome.system.proxy mode 'none'
  		;;
 esac
 
