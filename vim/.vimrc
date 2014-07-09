@@ -1,6 +1,6 @@
 "vim: foldmethod=marker
  
- source ~/.vimrc.bundles
+source ~/.vimrc.bundles
 
 " Setup
 filetype plugin on

@@ -4,10 +4,10 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
-Bundle 'git@github.com:gmarik/vundle'
+Bundle 'git@github.com:gmarik/Vundle.vim'
 Bundle 'git@github.com:MarcWeber/vim-addon-mw-utils'
 Bundle 'git@github.com:tomtom/tlib_vim'
 if executable('ack-grep')
