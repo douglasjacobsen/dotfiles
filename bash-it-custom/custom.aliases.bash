@@ -25,6 +25,7 @@ alias sshcon='ssh wtrw -t ssh cj-fe'
 alias sshmap='ssh wtrw -t ssh mp-fe'
 alias sshmus='ssh wtrw -t ssh mu-fe'
 alias sshmol='ssh wtrw -t ssh ml-fe'
+alias sshwol='ssh wtrw -t ssh wf-fe1'
 alias sshgpfs='ssh wtrw -t ssh gpfst7-fe'
 
 #########################################################################################
