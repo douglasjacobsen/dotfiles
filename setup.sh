@@ -1,6 +1,6 @@
 #!/bin/bash
 BASH_IT_ADDR="git@github.com:douglasjacobsen/bash-it.git"
-VUNDLE_ADDR="git@github.com:gmarik/vundle.git"
+VUNDLE_ADDR="git@github.com:gmarik/Vundle.vim.git"
 
 if [ -f ~/.vim ]; then
     mkdir -p ~/VimBackups
@@ -22,7 +22,7 @@ if [ -f ~/.bash_profile ]; then
     mv ~/.bash_profile ~/BashBackups/.
 fi
 
-git clone ${VUNDLE_ADDR} ~/.vim/bundle/vundle
+git clone ${VUNDLE_ADDR} ~/.vim/bundle/Vundle.vim
 git clone ${BASH_IT_ADDR} ~/.bash_it
 
 ~/.bash_it/install.sh
