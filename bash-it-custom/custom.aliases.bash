@@ -11,12 +11,6 @@ alias prepare-wine='echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope'
 alias mpas_tcs='svn co https://svn-mpas-model.cgd.ucar.edu/branches/ocean_projects/ocean_test_cases_staging/ocean'
 alias ps2pdf='ps2pdf13 -dPDFSETTINGS=/prepress -dSubsetFonts=true -dEmbedAllFonts=true -dMaxSubsetPct=100 -dCompatibilityLevel=1.3'
 
-ON_UBUNTU=`uname -a | grep "Ubuntu"`
-
-if [ -n "${ON_UBUNTU}" ]; then
-    alias module='/home/douglasj/software/sources/modules-3.2.10/modulecmd bash'
-fi
-
 #########################################################################################
 #					Set Aliases for LANL Computers										#
 #########################################################################################
