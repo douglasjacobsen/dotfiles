@@ -31,9 +31,6 @@ elif [ "${HOST_CHECK}" == "yslogin" ]; then
 elif [ "${HOST_CHECK}" == "hopper" ]; then
     module load git
 else # Ubuntu?
-    # Setup for MPAS
-    export NETCDF=/usr
-    export PNETCDF=/usr
-    export PIO=/usr
+	source /usr/local/Modules/3.2.10/init/bash
 fi
 
