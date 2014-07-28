@@ -18,8 +18,7 @@ ON_UBUNTU=`uname -a | grep "Ubuntu"`
 
 if [ -n "${ON_UBUNTU}" ]; then
     export PATH="${PATH}:/home/douglasj/Documents/metis-4.0"
-    export PATH="${PATH}:/home/douglasj/AndroidSDK/adt-bundle-linux-x86_64-20130917/sdk/tools"
-    export PATH="${PATH}:/home/douglasj/AndroidSDK/adt-bundle-linux-x86_64-20130917/sdk/platform-tools"
+    export PATH="${PATH}:/home/douglasj/AndroidTools/android-studio/sdk/platform-tools"
     export PYTHONPATH="${PYTHONPATH}:/home/douglasj/software/python/lib/python2.7/site-packages"
 
     shopt -s direxpand

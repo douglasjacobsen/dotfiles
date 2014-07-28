@@ -1,7 +1,7 @@
 #########################################################################################
 #						Set Aliases for Ease of Use										#
 #########################################################################################
-alias adb-start="adb kill-server && sudo /home/douglasj/AndroidSDK/adt-bundle-linux-x86_64-20130917/sdk/platform-tools/adb start-server"
+alias adb-start="adb kill-server && sudo /home/douglasj/AndroidTools/android-studio/sdk/platform-tools/adb start-server"
 alias tunhome="ssh -4fgN -D 23000 home"
 alias tunhome_ip="ssh -4fgN -D 23000 174.56.101.93"
 alias gnuplot="rlwrap -a -c gnuplot"
