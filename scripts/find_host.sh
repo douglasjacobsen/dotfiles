@@ -30,7 +30,6 @@ elif [ "${HOST_CHECK}" == "yslogin" ]; then
 	export PATH="${TMUX}/bin:${PATH}"
 elif [ "${HOST_CHECK}" == "hopper" ]; then
     module load git
-else # Ubuntu?
-	source /usr/local/Modules/3.2.10/init/bash
+#else # Ubuntu?
 fi
 
