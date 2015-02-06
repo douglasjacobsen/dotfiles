@@ -13,7 +13,6 @@ do
 
 	for LINE in `seq 1 ${LINES}`
 	do
-		echo "PWD is: $PWD"
 		BUILD=`awk "NR==${LINE}" .builds`
 		echo "Trying make ${COMPILER} ${BUILD}"
 
@@ -31,13 +30,18 @@ do
 			echo "${BUILD} passed"
 		else
 			echo " ** ${BUILD} failed ** "
-			exit
+			exit 1
 		fi
 
 		make clean ${BUILD} &> /dev/null
 		rm build_log
+		echo ""
 	done
 	rm .builds
 	rm -f namelist* stream*
 done
+
+echo " *** All builds were successful ***"
+
+exit 0
 
