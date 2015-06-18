@@ -26,7 +26,7 @@ Bundle 'git@github.com:vim-scripts/sessionman.vim'
 
 Bundle 'git@github.com:jistr/vim-nerdtree-tabs'
 Bundle 'git@github.com:mbbill/undotree'
-Bundle 'git@github.com:airblade/vim-gitgutter'
+"Bundle 'git@github.com:airblade/vim-gitgutter'
 Bundle 'git@github.com:tpope/vim-fugitive'
 Bundle 'git@github.com:tpope/vim-abolish.git'
 Bundle 'git@github.com:mattn/gist-vim'

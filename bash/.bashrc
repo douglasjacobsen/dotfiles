@@ -74,18 +74,6 @@ esac
 #    . ~/.bash_aliases
 #fi
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 export SVN_EDITOR="/usr/bin/vim"
 
 # enable programmable completion features (you don't need to enable
@@ -105,4 +93,5 @@ fi
 
 source ~/scripts/setup_module.sh
 source ~/scripts/find_host.sh
+source ~/scripts/setup_aliases.sh
 #source ~/scripts/set_proxy_info.sh

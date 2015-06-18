@@ -1,13 +1,17 @@
 #!/bin/bash
 
+# Update oh-my-zsh
+LAST_DIR=`pwd`
+cd ~/.oh_my_zsh
+git fetch origin &> /dev/null
+git reset --hard origin/master &> /dev/null
+cd $LAST_DIR
+
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
 
-CUSTOM_FILES=`ls bash-it-custom/`
-for FILE in ${CUSTOM_FILES}
-do
-	ln -sf ${PWD}/bash-it-custom/${FILE} ~/.bash_it/custom/.
-done
+cp zsh/.zsh ~/.
+cp zsh/colorful* ~/.oh_my_zsh/themes/.
 
 cp ${PWD}/git/.gitconfig ~/.
 git config --global core.excludesfile "${PWD}/git/core_excludes"

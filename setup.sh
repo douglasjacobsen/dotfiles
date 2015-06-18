@@ -1,5 +1,6 @@
 #!/bin/bash
 BASH_IT_ADDR="git@github.com:douglasjacobsen/bash-it.git"
+OMZSH_ADDR="git://github.com/robbyrussell/oh-my-zsh.git"
 VUNDLE_ADDR="git@github.com:gmarik/Vundle.vim.git"
 
 if [ -f ~/.vim ]; then
@@ -22,19 +23,19 @@ if [ -f ~/.bash_profile ]; then
     mv ~/.bash_profile ~/BashBackups/.
 fi
 
+if [ -f ~/.zshrc ]; then
+	mkdir -p ~/ZshBackups
+	mv ~/.zshrc ~/ZshBackups/.
+fi
+
 git clone ${VUNDLE_ADDR} ~/.vim/bundle/Vundle.vim
 git clone ${BASH_IT_ADDR} ~/.bash_it
-
-~/.bash_it/install.sh
+git clone ${OMZSH_ADDR} ~/.oh-my-zsh
 
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
-
-CUSTOM_FILES=`ls bash-it-custom/`
-for FILE in ${CUSTOM_FILES}
-do
-	ln -sf ${PWD}/bash-it-custom/${FILE} ~/.bash_it/custom/.
-done
+cp zsh/.zshrc ~/.
+cp zsh/colorful* ~/.oh_my_zsh/themes/.
 
 ln -s ${PWD}/vim/.vimrc ~/.vimrc
 ln -s ${PWD}/vim/.vimrc.bundles ~/.vimrc.bundles
@@ -47,3 +48,6 @@ mkdir -p ~/scripts
 cp -R scripts/* ~/scripts/.
 
 vim -u ~/.vimrc.bundles +BundleInstall +q
+
+echo "If you plan to use bash, please run ${HOME}/.bash_it/install.sh"
+echo "   Currently, your default shell is: ${SHELL}"

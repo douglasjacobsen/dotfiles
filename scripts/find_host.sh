@@ -23,6 +23,11 @@ elif [ "${HOST_CHECK}" == "ml" ]; then
     source ${SCRIPT_DIR}/add_modules.sh
     module load friendly-testing
     module load python-epd/7.3.2 cmake/2.8.8 
+elif [ "${HOST_CHECK}" == "wf" ]; then
+    export SCRIPT_DIR=/usr/projects/climate/SHARED_CLIMATE/scripts
+    source ${SCRIPT_DIR}/add_modules.sh
+    module load friendly-testing
+    module load python-epd/7.3.2 cmake/2.8.8 
 elif [ "${HOST_CHECK}" == "yslogin" ]; then
 	export LIBEVENT=/glade/u/home/douglasj/libevent/2.1.3
 	export TMUX=/glade/u/home/douglasj/tmux/1.8
@@ -30,6 +35,9 @@ elif [ "${HOST_CHECK}" == "yslogin" ]; then
 	export PATH="${TMUX}/bin:${PATH}"
 elif [ "${HOST_CHECK}" == "hopper" ]; then
     module load git
-#else # Ubuntu?
+else # Local system
+	source /usr/local/Modules/3.2.10/init/${SHELL##*/}
+	export PATH="/home/douglasj/scripts:${PATH}"
+	export PATH="/home/douglasj/AndroidTools/android-studio/sdk/platform-tools:${PATH}"
 fi
 
