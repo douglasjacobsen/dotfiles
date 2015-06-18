@@ -1,4 +1,9 @@
 #!/bin/bash
+OMZSH_ADDR="git://github.com/robbyrussell/oh-my-zsh.git"
+
+if [ ! -d ~/.oh_my_zsh ]; then
+	git clone ${OMZSH_ADDR} ~/.oh-my-zsh
+fi
 
 # Update oh-my-zsh
 LAST_DIR=`pwd`
