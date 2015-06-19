@@ -41,6 +41,8 @@ ln -s ${PWD}/vim/.vimrc ~/.vimrc
 ln -s ${PWD}/vim/.vimrc.bundles ~/.vimrc.bundles
 ln -s ${PWD}/tmux/.tmux.conf ~/.tmux.conf
 
+./setup_bash_it.sh
+
 cp ${PWD}/git/.gitconfig ~/.
 git config --global core.excludesfile "${PWD}/git/core_excludes"
 
@@ -49,5 +51,3 @@ cp -R scripts/* ~/scripts/.
 
 vim -u ~/.vimrc.bundles +BundleInstall +q
 
-echo "If you plan to use bash, please run ${HOME}/.bash_it/install.sh"
-echo "   Currently, your default shell is: ${SHELL}"
