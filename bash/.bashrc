@@ -36,9 +36,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 source ~/scripts/setup_aliases.sh
-source ~/scripts/setup_module.sh
 source ~/scripts/find_host.sh
-#source ~/scripts/set_proxy_info.sh
 
 export BASHRC_SOURCED=yes
 
