@@ -59,6 +59,7 @@ elif [ "${HOST_CHECK}" == "yavin" ]; then # Local system
 	source /usr/local/Modules/3.2.10/init/${SHELL##*/}
 	export PATH="/home/douglasj/scripts:${PATH}"
 	export PATH="/home/douglasj/AndroidTools/android-studio/sdk/platform-tools:${PATH}"
+	export GIT_PS1_SHOWUNTRACKEDFILES=t
 
 	source ~/scripts/setup_module.sh
 	source ~/scripts/set_proxy_info.sh

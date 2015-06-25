@@ -35,6 +35,8 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+export GIT_PS1_SHOWDIRTYSTATE=t
+
 source ~/scripts/setup_aliases.sh
 source ~/scripts/find_host.sh
 
