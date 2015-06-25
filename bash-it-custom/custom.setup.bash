@@ -27,3 +27,5 @@ if [ -n "${ON_UBUNTU}" ]; then
 fi
 
 export PATH="${PATH}:${HOME}/scripts"
+
+source ~/scripts/git-sh-prompt
