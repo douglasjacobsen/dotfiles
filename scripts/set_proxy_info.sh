@@ -1,7 +1,7 @@
 #########################################################################################
 #			Set Info for Mounting and Aliasing to Desktop at home						#
 #########################################################################################
-ATWORK_DOMAIN='.lanl.gov'
+ATWORK_DOMAIN='130.55.'
 WORKIP="no"
 
 OS=`uname`
@@ -17,7 +17,7 @@ IPS=`echo $IP | tr " " "\n"`
 
 for IP in $IPS
 do
-    DOMAIN=`nslookup ${IP} | grep "${ATWORK_DOMAIN}"`
+    DOMAIN=`echo ${IP} | grep "${ATWORK_DOMAIN}"`
 
     if [ -n "${DOMAIN}" ]; then
         WORKIP="yes"
