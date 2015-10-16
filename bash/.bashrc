@@ -39,6 +39,7 @@ export GIT_PS1_SHOWDIRTYSTATE=t
 
 source ~/scripts/setup_aliases.sh
 source ~/scripts/find_host.sh
+source ~/scripts/git-sh-prompt
 
 export BASHRC_SOURCED=yes
 
