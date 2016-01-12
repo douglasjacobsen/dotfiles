@@ -2,6 +2,24 @@
 BASH_IT_ADDR="git@github.com:douglasjacobsen/bash-it.git"
 OMZSH_ADDR="git://github.com/robbyrussell/oh-my-zsh.git"
 
+BUNDLES=0
+
+while [[ $# > 0 ]]
+do
+	key="$1"
+
+	case $key in
+		-b|--bundles)
+		BUNDLES=1
+		shift # past argument
+		;;
+		*)
+				# unknown option
+		;;
+	esac
+	shift # past argument or value
+done
+
 # Update oh-my-zsh
 if [ -d ~/.oh-my-zsh ];
 then
@@ -38,6 +56,7 @@ git config --global core.excludesfile "${PWD}/git/core_excludes"
 mkdir -p ~/scripts
 cp -R scripts/* ~/scripts/.
 
-vim -u ~/.vimrc.bundles +BundleInstall +q
+if [ ${BUNDLES} == 1 ]; then
+	vim -u ~/.vimrc.bundles +BundleInstall +q
 
 ./setup_bash_it.sh
