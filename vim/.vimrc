@@ -102,3 +102,6 @@ nnoremap <leader>gb :Gblame<CR>
 " Git gutter mappings (git diff plugin)
 nnoremap <leader>ggt :GitGutterToggle<CR>
 nnoremap <leader>ggl :GitGutterLineHighlightsToggle<CR>
+
+" LineDiff mappings
+nnoremap <leader>ld :LineDiff<CR>
