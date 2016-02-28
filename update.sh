@@ -58,5 +58,6 @@ cp -R scripts/* ~/scripts/.
 
 if [ ${BUNDLES} == 1 ]; then
 	vim -u ~/.vimrc.bundles +BundleInstall +q
+fi
 
 ./setup_bash_it.sh
