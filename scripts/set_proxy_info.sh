@@ -30,7 +30,6 @@ case $WORKIP in
  		export ftp_proxy="http://proxyout.lanl.gov"
  		export no_proxy="*.lanl.gov"
  		cp ~/.subversion/servers.lanl ~/.subversion/servers
- 		cp /etc/apt/apt.conf.lanl /etc/apt/apt.conf
  		git config --global http.proxy $http_proxy
 		gsettings set org.gnome.system.proxy mode 'auto'
 		gsettings set org.gnome.system.proxy autoconfig-url 'http://wpad.lanl.gov/wpad.dat'
@@ -41,7 +40,6 @@ case $WORKIP in
  		unset no_proxy
 		unset all_proxy
 		cp ~/.subversion/servers.nolanl ~/.subversion/servers
- 		cp /etc/apt/apt.conf.nolanl /etc/apt/apt.conf
  		git config --global http.proxy ""
 		gsettings set org.gnome.system.proxy mode 'none'
  		;;

@@ -1,6 +1,5 @@
 #!/bin/bash
 BASH_IT_ADDR="git@github.com:douglasjacobsen/bash-it.git"
-OMZSH_ADDR="git://github.com/robbyrussell/oh-my-zsh.git"
 
 BUNDLES=0
 
@@ -19,18 +18,6 @@ do
 	esac
 	shift # past argument or value
 done
-
-# Update oh-my-zsh
-if [ -d ~/.oh-my-zsh ];
-then
-	LAST_DIR=`pwd`
-	cd ~/.oh-my-zsh
-	git fetch origin &> /dev/null
-	git reset --hard origin/master &> /dev/null
-	cd $LAST_DIR
-else
-	git clone ${OMZSH_ADDR} ~/.oh-my-zsh &> /dev/null
-fi
 
 # Update bash_it
 if [ -d ~/.bash_it ];

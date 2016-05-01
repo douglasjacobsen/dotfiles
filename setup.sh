@@ -1,6 +1,5 @@
 #!/bin/bash
 BASH_IT_ADDR="git@github.com:douglasjacobsen/bash-it.git"
-OMZSH_ADDR="git://github.com/robbyrussell/oh-my-zsh.git"
 VUNDLE_ADDR="git@github.com:gmarik/Vundle.vim.git"
 
 BUNDLES=0
@@ -48,16 +47,15 @@ fi
 
 git clone ${VUNDLE_ADDR} ~/.vim/bundle/Vundle.vim
 git clone ${BASH_IT_ADDR} ~/.bash_it
-git clone ${OMZSH_ADDR} ~/.oh-my-zsh
 
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
 cp zsh/.zshrc ~/.
 cp zsh/colorful* ~/.oh_my_zsh/themes/.
 
-ln -s ${PWD}/vim/.vimrc ~/.vimrc
-ln -s ${PWD}/vim/.vimrc.bundles ~/.vimrc.bundles
-ln -s ${PWD}/tmux/.tmux.conf ~/.tmux.conf
+ln -sf ${PWD}/vim/.vimrc ~/.vimrc
+ln -sf ${PWD}/vim/.vimrc.bundles ~/.vimrc.bundles
+ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
 
 ./setup_bash_it.sh
 
