@@ -40,18 +40,11 @@ if [ -f ~/.bash_profile ]; then
     mv ~/.bash_profile ~/BashBackups/.
 fi
 
-if [ -f ~/.zshrc ]; then
-	mkdir -p ~/ZshBackups
-	mv ~/.zshrc ~/ZshBackups/.
-fi
-
 git clone ${VUNDLE_ADDR} ~/.vim/bundle/Vundle.vim
 git clone ${BASH_IT_ADDR} ~/.bash_it
 
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
-cp zsh/.zshrc ~/.
-cp zsh/colorful* ~/.oh_my_zsh/themes/.
 
 ln -sf ${PWD}/vim/.vimrc ~/.vimrc
 ln -sf ${PWD}/vim/.vimrc.bundles ~/.vimrc.bundles
