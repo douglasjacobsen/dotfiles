@@ -51,3 +51,5 @@ Bundle 'git@github.com:christoomey/vim-tmux-navigator.git'
 
 Bundle 'git@github.com:vim-scripts/vim-gista.git'
 Bundle 'git@github.com:AndrewRadev/linediff.vim.git'
+Bundle 'git@github.com:josuegaleas/jay'
+Bundle 'git@github.com:flazz/vim-colorschemes'

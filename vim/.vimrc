@@ -105,3 +105,5 @@ nnoremap <leader>ggl :GitGutterLineHighlightsToggle<CR>
 
 " LineDiff mappings
 nnoremap <leader>ld :LineDiff<CR>
+
+colo peachpuff
