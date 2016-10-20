@@ -34,6 +34,7 @@ Bundle 'git@github.com:scrooloose/nerdcommenter'
 Bundle 'git@github.com:godlygeek/tabular'
 if executable('ctags')
     Bundle 'git@github.com:majutsushi/tagbar'
+    Bundle 'git@github.com:vim-scripts/taglist.vim.git'
 endif
 Bundle 'git@github.com:Shougo/neocomplcache'
 Bundle 'git@github.com:tpope/vim-pathogen'
@@ -41,8 +42,6 @@ Bundle 'git@github.com:tpope/vim-pathogen'
 "Bundle 'git@github.com:vim-scripts/python.vim.git'
 "Bundle 'git@github.com:vim-scripts/python_match.vim.git'
 "Bundle 'git@github.com:vim-scripts/pythoncomplete.git'
-
-Bundle 'git@github.com:vim-scripts/taglist.vim.git'
 
 Bundle 'git@github.com:douglasjacobsen/vim-bufexplorer.git'
 

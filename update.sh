@@ -34,9 +34,6 @@ fi
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
 
-cp zsh/.zshrc ~/.
-cp zsh/colorful* ~/.oh-my-zsh/themes/.
-
 cp ${PWD}/git/.gitconfig ~/.
 git config --global core.excludesfile "${PWD}/git/core_excludes"
 
