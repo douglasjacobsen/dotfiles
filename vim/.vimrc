@@ -1,5 +1,5 @@
 "vim: foldmethod=marker
- 
+
 source ~/.vimrc.bundles
 
 " Setup
@@ -67,17 +67,7 @@ execute pathogen#infect('local/{}')
 let fortran_free_source=1
 let mapleader=','
 autocmd FileType fortran setlocal textwidth=0
-
-set autoindent
-set number
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4 
-set modeline
-set modelines=5
-set foldmethod=marker
-set hlsearch
-set ignorecase
+autocmd FileType python setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 set wildmode=longest:full
 set wildmenu
@@ -105,5 +95,17 @@ nnoremap <leader>ggl :GitGutterLineHighlightsToggle<CR>
 
 " LineDiff mappings
 nnoremap <leader>ld :LineDiff<CR>
+
+set autoindent
+set number
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set modeline
+set modelines=5
+set foldmethod=marker
+set hlsearch
+set ignorecase
 
 colo peachpuff
