@@ -63,10 +63,11 @@ do
     ln -sf ${PWD}/${FILE} ~/.
 done
 
-cp ${PWD}/git/.gitconfig ~/.
-git config --global core.excludesfile "${PWD}/git/core_excludes"
-
 mkdir -p ~/scripts
 cp -R scripts/* ~/scripts/.
+
+cp ${PWD}/git/.gitconfig ~/.
+git config --global core.excludesfile "${PWD}/git/core_excludes"
+git config --global init.templatedir "~/scripts/git_template"
 
 ./setup_bash_it.sh

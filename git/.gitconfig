@@ -22,6 +22,7 @@
 	rc = rebase --continue
 	path-br = "!bash -xc \"git checkout -b \"${PWD#${PWD%/*/*}/}\" MPAS-Dev/MPAS/develop\""
 	plg = log --graph --format=\"%CredH: %C(auto)%h %CredA: %Cblue %aE %Cred S: %Creset %s %C(auto) %d\"
+	ctags = !.git/hooks/ctags
 [color]
 	ui = true
 [merge]

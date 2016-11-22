@@ -37,8 +37,10 @@ ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
 ~/.spf13-vim-3/bootstrap.sh
 ./setup_bash_it.sh
 
-cp ${PWD}/git/.gitconfig ~/.
-git config --global core.excludesfile "${PWD}/git/core_excludes"
-
 mkdir -p ~/scripts
 cp -R scripts/* ~/scripts/.
+
+
+cp ${PWD}/git/.gitconfig ~/.
+git config --global core.excludesfile "${PWD}/git/core_excludes"
+git config --global init.templatedir "~/scripts/git_template"
