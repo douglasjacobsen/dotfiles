@@ -1,0 +1,5 @@
+"colo fruity
+set mouse=            " Disable mouse usage, to allow middle click copy/paste
+set pastetoggle=<F3>  " Change paste toggle to F3
+set nofoldenable      " Disable auto fold
+set noincsearch       " Disable find as you type search

@@ -28,6 +28,10 @@ git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
 
+for FILE in `ls -1 vim/.vimrc*`;
+do
+    ln -sf ${PWD}/${FILE} ~/.
+done
 ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
 
 ~/.spf13-vim-3/bootstrap.sh
