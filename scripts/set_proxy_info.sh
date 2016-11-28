@@ -2,7 +2,7 @@
 #      Set Info for Mounting and Aliasing to Desktop at home            #
 #########################################################################################
 
-INTELVPN_DOMAIN='10.254.'
+#INTELVPN_DOMAIN='10.255.'
 INTELWORK_DOMAIN='10.50.'
 LANLWORK_DOMAIN='130.55.'
 WORKIP="none"
@@ -20,23 +20,21 @@ IPS=`echo $IP | tr " " "\n"`
 
 for IP in $IPS
 do
-  DOMAIN=`echo ${IP} | grep "${LANLWORK_DOMAIN}"`
+  LANL_DOMAIN=`echo ${IP} | grep "${LANLWORK_DOMAIN}"`
+  INTELWORK_DOMAIN=`echo ${IP} | grep "${INTELWORK_DOMAIN}"`
 
-  if [ -n "${DOMAIN}" ]; then
+  if [ -n "${LANL_DOMAIN}" ]; then
     WORKIP="lanl"
     break
-  fi
-
-  DOMAIN=`echo ${IP} | grep "${INTELWORK_DOMAIN}"`
-  if [ -n "${DOMAIN}" ]; then
+  elif [ -n "${INTELWORK_DOMAIN}" ]; then
     WORKIP="intel"
     break
-  fi
-
-  DOMAIN=`echo ${IP} | grep "${INTELVPN_DOMAIN}"`
-  if [ -n "${DOMAIN}" ]; then
-    WORKIP="intel"
-    break
+  else # Test for Intel VPN
+    NSLOOKUP=`nslookup ${IP} | grep "name =" | grep "intel"`
+    if [ -n "${NSLOOKUP}" ]; then
+      WORKIP="intel"
+      break
+    fi
   fi
 done
 
