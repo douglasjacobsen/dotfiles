@@ -1,5 +1,8 @@
-"colo fruity
 set mouse=            " Disable mouse usage, to allow middle click copy/paste
 set pastetoggle=<F3>  " Change paste toggle to F3
 set nofoldenable      " Disable auto fold
 set noincsearch       " Disable find as you type search
+set scrolljump=1                " Lines to scroll when cursor leaves screen
+set scrolloff=0                 " Minimum lines to keep above and below cursor
+
+let g:indent_guides_enable_on_vim_startup = 0 "Disable indent guides plugin on startup, can be toggled with <leader>ig
