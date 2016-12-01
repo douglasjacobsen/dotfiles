@@ -4,3 +4,6 @@ UnBundle 'git@github.com:tpope/vim-cucumber'
 UnBundle 'git@github.com:quentindecock/vim-cucumber-align-pipes'
 UnBundle 'git@github.com:saltstack/salt-vim'
 UnBundle 'git@github.com:cespare/vim-toml'
+
+UnBundle 'git@github.com:vim-airline/vim-airline'
+UnBundle 'git@github.com:vim-airline/vim-airline-themes'
