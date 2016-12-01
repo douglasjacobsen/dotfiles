@@ -20,13 +20,13 @@ IPS=`echo $IP | tr " " "\n"`
 
 for IP in $IPS
 do
-  LANL_DOMAIN=`echo ${IP} | grep "${LANLWORK_DOMAIN}"`
-  INTELWORK_DOMAIN=`echo ${IP} | grep "${INTELWORK_DOMAIN}"`
+  LANL_TEST=`echo ${IP} | grep "${LANLWORK_DOMAIN}"`
+  INTELWORK_TEST=`echo ${IP} | grep "${INTELWORK_DOMAIN}"`
 
-  if [ -n "${LANL_DOMAIN}" ]; then
+  if [ -n "${LANL_TEST}" ]; then
     WORKIP="lanl"
     break
-  elif [ -n "${INTELWORK_DOMAIN}" ]; then
+  elif [ -n "${INTELWORK_TEST}" ]; then
     WORKIP="intel"
     break
   else # Test for Intel VPN
@@ -44,6 +44,8 @@ case $WORKIP in
     export ftp_proxy="http://proxyout.lanl.gov"
     export no_proxy="*.lanl.gov"
 #   cp ~/.subversion/servers.lanl ~/.subversion/servers
+    cat ~/.ssh/config | sed "s|ProxyCommand.*|ProxyCommand None|g" > ~/.ssh/.tmp
+    mv ~/.ssh/.tmp ~/.ssh/config
     git config --global http.proxy $http_proxy
     gsettings set org.gnome.system.proxy mode 'auto'
     gsettings set org.gnome.system.proxy autoconfig-url 'http://wpad.lanl.gov/wpad.dat'
@@ -52,6 +54,8 @@ case $WORKIP in
     export https_proxy="http://proxy-chain.intel.com:911"
     export ftp_proxy="http://proxy-chain.intel.com:911"
     export no_proxy="*.intel.com"
+    cat ~/.ssh/config | sed "s|ProxyCommand.*|ProxyCommand /usr/local/bin/socks-gateway %h %p|g" > ~/.ssh/.tmp
+    mv ~/.ssh/.tmp ~/.ssh/config
 #   cp ~/.subversion/servers.lanl ~/.subversion/servers
     git config --global http.proxy $http_proxy
     gsettings set org.gnome.system.proxy mode 'auto'
@@ -64,6 +68,8 @@ case $WORKIP in
     unset no_proxy
     unset all_proxy
 #   cp ~/.subversion/servers.nolanl ~/.subversion/servers
+    cat ~/.ssh/config | sed "s|ProxyCommand.*|ProxyCommand None|g" > ~/.ssh/.tmp
+    mv ~/.ssh/.tmp ~/.ssh/config
     git config --global http.proxy ""
     gsettings set org.gnome.system.proxy mode 'none'
     ;;
