@@ -6,5 +6,6 @@ set scrolljump=1                " Lines to scroll when cursor leaves screen
 set scrolloff=0                 " Minimum lines to keep above and below cursor
 set foldmethod=marker
 set nosplitbelow                  " Puts new split windows to the top of the current
+set ic
 
 let g:indent_guides_enable_on_vim_startup = 0 "Disable indent guides plugin on startup, can be toggled with <leader>ig

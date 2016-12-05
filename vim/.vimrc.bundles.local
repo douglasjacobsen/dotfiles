@@ -7,3 +7,5 @@ UnBundle 'git@github.com:cespare/vim-toml'
 
 UnBundle 'git@github.com:vim-airline/vim-airline'
 UnBundle 'git@github.com:vim-airline/vim-airline-themes'
+
+Bundle 'git@github.com:thalesmello/tabfold'
