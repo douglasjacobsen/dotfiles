@@ -1,2 +1,3 @@
 let g:spf13_no_autochdir = 1
-let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'misc',]
+"let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'misc',]
+let g:spf13_bundle_groups=['general', 'writing', 'programming', 'misc',]
