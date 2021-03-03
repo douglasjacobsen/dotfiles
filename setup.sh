@@ -38,6 +38,7 @@ ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
 
 mkdir -p ~/.config/kitty
 ln -sf ~/.kitty_themes/themes/AdventureTime.conf ~/.config/kitty/theme.conf
+ln -sf ${PWD}/kitty/kitty.conf ~/.config/kitty/.
 
 ~/.spf13-vim-3/bootstrap.sh
 ./setup_bash_it.sh
