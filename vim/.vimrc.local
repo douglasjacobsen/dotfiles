@@ -10,4 +10,5 @@ set ic
 
 let g:indent_guides_enable_on_vim_startup = 0 "Disable indent guides plugin on startup, can be toggled with <leader>ig
 
-colorscheme candy
+"colorscheme candy
+colorscheme peachpuff
