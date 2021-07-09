@@ -3,6 +3,7 @@ BASH_IT_ADDR="git@github.com:douglasjacobsen/bash-it.git"
 SPF13_ADDR="git@github.com:douglasjacobsen/spf13-vim.git"
 KITTY_THEMES_ADDR="git@github.com:dexpota/kitty-themes.git"
 TERMINATOR_THEMES_ADDR="git@github.com:EliverLara/terminator-themes.git"
+TMUX_CONF_ADDR="git@github.com:douglasjacobsen/tmux-config.git"
 
 if [ -f ~/.vim ]; then
     mkdir -p ~/VimBackups
@@ -28,6 +29,7 @@ git clone ${BASH_IT_ADDR} ~/.bash_it
 git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3
 #git clone --depth=1 ${KITTY_THEMES_ADDR} ~/.kitty_themes
 git clone --depth=1 ${TERMINATOR_THEMES_ADDR} ~/.termintaor_themes
+git clone ${TMUX_CONF_ADDR} ~/.tmux-config
 
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
@@ -36,7 +38,10 @@ for FILE in `ls -1 vim/.vimrc*`;
 do
     ln -sf ${PWD}/${FILE} ~/.
 done
-ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
+
+# Setup tmux
+# ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
+~/.tmux-config/install.sh
 
 # Setup Kitty
 # mkdir -p ~/.config/kitty
