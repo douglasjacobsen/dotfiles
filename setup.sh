@@ -26,18 +26,18 @@ if [ -f ~/.bash_profile ]; then
 fi
 
 git clone ${BASH_IT_ADDR} ~/.bash_it
-git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3
-#git clone --depth=1 ${KITTY_THEMES_ADDR} ~/.kitty_themes
+# git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3
+# git clone --depth=1 ${KITTY_THEMES_ADDR} ~/.kitty_themes
 git clone --depth=1 ${TERMINATOR_THEMES_ADDR} ~/.termintaor_themes
 git clone ${TMUX_CONF_ADDR} ~/.tmux-config
 
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
 
-for FILE in `ls -1 vim/.vimrc*`;
-do
-    ln -sf ${PWD}/${FILE} ~/.
-done
+# for FILE in `ls -1 vim/.vimrc*`;
+# do
+#     ln -sf ${PWD}/${FILE} ~/.
+# done
 
 # Setup tmux
 # ln -sf ${PWD}/tmux/.tmux.conf ~/.tmux.conf
@@ -52,7 +52,13 @@ done
 mkdir -p ~/.config/terminator
 ln -sf ${PWD}/terminator/config ~/.config/terminator/config
 
-~/.spf13-vim-3/bootstrap.sh
+# Setup VIM
+# ~/.spf13-vim-3/bootstrap.sh
+curl -sLf https://spacevim.org/install.sh | bash
+mkdir -p ~/.SpaceVim.d
+cp -r SpaceVim/* ~/.SpaceVim.d/.
+
+# Setup Bash-it
 ./setup_bash_it.sh
 
 mkdir -p ~/scripts

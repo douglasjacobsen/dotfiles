@@ -35,26 +35,40 @@ else
     git clone ${BASH_IT_ADDR} ~/.bash_it &> /dev/null
 fi
 
-# Update spf13-vim-3
-if [ -d ~/.spf13-vim-3 ];
-then
-    LAST_DIR=`pwd`
-    cd ~/.spf13-vim-3
-    OLD_VER=`git log -n 1 --format="%H"`
-    git fetch origin &> /dev/null
-    git reset --hard origin/3.0 &> /dev/null
-    NEW_VER=`git log -n 1 --format="%H"`
+# # Update spf13-vim-3
+# if [ -d ~/.spf13-vim-3 ];
+# then
+#     LAST_DIR=`pwd`
+#     cd ~/.spf13-vim-3
+#     OLD_VER=`git log -n 1 --format="%H"`
+#     git fetch origin &> /dev/null
+#     git reset --hard origin/3.0 &> /dev/null
+#     NEW_VER=`git log -n 1 --format="%H"`
+# 
+#     if [ "${OLD_VER}" != "${NEW_VER}" ]; then
+#         echo "Updating SPF13-Vim version"
+#         sh ./bootstrap.sh
+#     else
+#         echo "No new commits in SPF13-Vim. Skipping update..."
+#     fi
+#     cd $LAST_DIR
+# else
+#     git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3 &> /dev/null
+#     sh ~/.spf13-vim-3/bootstrap.sh
+# fi
 
-    if [ "${OLD_VER}" != "${NEW_VER}" ]; then
-        echo "Updating SPF13-Vim version"
-        sh ./bootstrap.sh
-    else
-        echo "No new commits in SPF13-Vim. Skipping update..."
-    fi
-    cd $LAST_DIR
-else
-    git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3 &> /dev/null
-    sh ~/.spf13-vim-3/bootstrap.sh
+# Update SpaceVim
+if [ -d ~/.SpaceVim ];
+then
+  LAST_DIR=`pwd`
+  cd ~/.SpaceVim
+  git pull &> /dev/null
+  vim -c ":SPUpdate"
+
+  cd ${LAST_DIR}
+  rm -rf ~/.SpaceVim.d
+  mkdir -p ~/.SpaceVim.d
+  cp -r SpaceVim/* ~/.SpaceVim.d/.
 fi
 
 # Update tmux config
@@ -85,11 +99,11 @@ fi
 cp bash/.bashrc ~/.
 cp bash/.bash_profile ~/.
 
-rm -f ~/.vimswap/* ~/.vimviews/* ~/.viminfo
-for FILE in `ls -1 vim/.vimrc*`;
-do
-    ln -sf ${PWD}/${FILE} ~/.
-done
+# rm -f ~/.vimswap/* ~/.vimviews/* ~/.viminfo
+# for FILE in `ls -1 vim/.vimrc*`;
+# do
+#     ln -sf ${PWD}/${FILE} ~/.
+# done
 
 # Update terminator config
 if [ ! -d ~/.config/terminator ]; then
