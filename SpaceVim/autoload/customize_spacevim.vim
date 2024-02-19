@@ -4,4 +4,8 @@ function! customize_spacevim#after() abort
   unmap <C-Right>
   unmap <C-Up>
   unmap <C-Down>
+  set completeopt+=longest
+  set completeopt-=menu
+  set nowic
+  set wildmode=longest,list
 endfunction

@@ -13,13 +13,8 @@
     # if you want to use more colorscheme, please load the colorscheme
     # layer
     colorscheme = "gruvbox"
-    # colorscheme = "palenight"
-    # colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
+    colorscheme_bg = "dark"
     enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
     statusline_separator = "arrow"
     statusline_iseparator = "arrow"
     buffer_index_type = 4
@@ -27,13 +22,16 @@
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     statusline_unicode = false
-    # Enable vim compatible mode, avoid changing origin vim key bindings
-    # vimcompatible = true
     relativenumber = false
+
+[[layers]]
+name = 'colorscheme'
+enable = true
 
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
+enable = false
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "cycle"
 
@@ -47,3 +45,7 @@ default_height = 30
 name = 'core'
 enable = true
 enable_smooth_scrolling = false
+
+[[layers]]
+name = 'git'
+enable = true
