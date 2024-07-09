@@ -23,6 +23,7 @@
     enable_statusline_mode = false
     statusline_unicode = false
     relativenumber = false
+    project_auto_root = false
 
 [[layers]]
 name = 'colorscheme'
@@ -49,3 +50,4 @@ enable_smooth_scrolling = false
 [[layers]]
 name = 'git'
 enable = true
+git_plugin = 'fugitive'

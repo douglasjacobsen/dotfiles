@@ -57,6 +57,10 @@ ln -sf ${PWD}/terminator/config ~/.config/terminator/config
 curl -sLf https://spacevim.org/install.sh | bash
 mkdir -p ~/.SpaceVim.d
 cp -r SpaceVim/* ~/.SpaceVim.d/.
+cd ~/.SpaceVim
+git fetch --unshallow &> /dev/null
+git checkout v2.3.0 &> /dev/null
+cd -
 
 # Setup Bash-it
 ./setup_bash_it.sh
