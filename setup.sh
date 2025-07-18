@@ -28,7 +28,7 @@ fi
 git clone ${BASH_IT_ADDR} ~/.bash_it
 # git clone -b 3.0 ${SPF13_ADDR} ~/.spf13-vim-3
 # git clone --depth=1 ${KITTY_THEMES_ADDR} ~/.kitty_themes
-git clone --depth=1 ${TERMINATOR_THEMES_ADDR} ~/.termintaor_themes
+git clone --depth=1 ${TERMINATOR_THEMES_ADDR} ~/.terminator_themes
 git clone ${TMUX_CONF_ADDR} ~/.tmux-config
 
 cp bash/.bashrc ~/.
