@@ -44,7 +44,7 @@ source ~/scripts/git-sh-prompt
 export BASHRC_SOURCED=yes
 
 if [ -f ~/.bash_profile ]; then
-    if [ -z ${BASH_PROFILE_SOURCED} ]; then
+    if [ -n "${BASH_PROFILE_SOURCED}" ]; then
         source ~/.bash_profile
     fi
 fi
