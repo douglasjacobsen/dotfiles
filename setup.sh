@@ -54,13 +54,14 @@ ln -sf ${PWD}/terminator/config ~/.config/terminator/config
 
 # Setup VIM
 # ~/.spf13-vim-3/bootstrap.sh
-curl -sLf https://spacevim.org/install.sh | bash
+#curl -sLf https://spacevim.org/install.sh | bash
+git clone --revision v2.3.0 git@github.com:douglasjacobsen/SpaceVim ~/.SpaceVim
+if [ -d ~/.vim ]; then
+	rm -rf ~/.vim
+fi
+ln -s ~/.SpaceVim ~/.vim
 mkdir -p ~/.SpaceVim.d
 cp -r SpaceVim/* ~/.SpaceVim.d/.
-cd ~/.SpaceVim.d
-git fetch --unshallow &> /dev/null
-git checkout v2.3.0 &> /dev/null
-cd -
 
 # Setup Bash-it
 ./setup_bash_it.sh
