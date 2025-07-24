@@ -17,9 +17,17 @@ export BASH_IT_THEME='colorful'
 export GIT_HOSTING='git@github.com'
 
 # Set my editor, svn, and git editor
-export EDITOR="vim"
-export GIT_EDITOR='vim'
-export SVN_EDITOR='vim'
+if [ `which lvim` ];
+then
+  export EDITOR="lvim"
+  export GIT_EDITOR="lvim"
+  export SVN_EDITOR="lvim"
+else
+  export EDITOR="vim"
+  export GIT_EDITOR="vim"
+  export SVN_EDITOR="vim"
+fi
+
 
 # Don't check mail when opening terminal.
 unset MAILCHECK

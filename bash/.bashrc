@@ -37,6 +37,8 @@ fi
 
 export GIT_PS1_SHOWDIRTYSTATE=t
 
+# Add user bin to path
+export PATH="${HOME}/.local/bin:${PATH}"
 source ~/scripts/setup_aliases.sh
 source ~/scripts/find_host.sh
 source ~/scripts/git-sh-prompt

@@ -63,13 +63,27 @@ ln -s ~/.SpaceVim ~/.vim
 mkdir -p ~/.SpaceVim.d
 cp -r SpaceVim/* ~/.SpaceVim.d/.
 
+# Setup LunarVim
+wget https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh
+chmod a+x install.sh
+LV_BRANCH='release-1.2/neovim-0.8' ./install.sh --no-install-dependencies -y --overwrite &> ~/lunarvim_setup.log
+rm install.sh
+
+mkdir -p ~/.config/lvim
+cp LunarVim/* ~/.config/lvim/.
+
 # Setup Bash-it
 ./setup_bash_it.sh
 
 mkdir -p ~/scripts
 cp -R scripts/* ~/scripts/.
 
-
 cp ${PWD}/git/.gitconfig ~/.
 git config --global core.excludesfile "${PWD}/git/core_excludes"
 git config --global init.templatedir "~/scripts/git_template"
+
+echo " ************************* "
+echo " Don't forget to install NerdFonts"
+echo " https://github.com/getnf/getnf"
+echo " ************************* "
+

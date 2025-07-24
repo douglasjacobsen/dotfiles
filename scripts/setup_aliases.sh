@@ -71,3 +71,8 @@ if [ -n "${ON_UBUNTU}" ]; then
 fi
 
 export PATH="${PATH}:${HOME}/scripts"
+
+if [ `which lvim` ];
+then
+  alias vim=lvim
+fi
