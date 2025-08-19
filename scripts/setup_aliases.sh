@@ -72,7 +72,11 @@ fi
 
 export PATH="${PATH}:${HOME}/scripts"
 
-if [ `which lvim` ];
+which nvim &> /dev/null
+NVIM_TEST=$?
+which lvim &> /dev/null
+LVIM_TEST=$?
+if [ $NVIM_TEST == 0 -a $LVIM_TEST == 0 ];
 then
-  alias vim=lvim
+  alias vim=lvim                                                                                                                                                                                                                                                                                                                             
 fi

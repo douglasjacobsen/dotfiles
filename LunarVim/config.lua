@@ -11,3 +11,4 @@ lvim.keys.normal_mode["<C-right>"] = false
 vim.opt.mouse = ""
 lvim.builtin.project.manual_mode = true
 
+vim.opt.wildmode = "list:longest"
