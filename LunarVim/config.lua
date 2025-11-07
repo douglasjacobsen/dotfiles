@@ -7,6 +7,7 @@
 
 lvim.keys.normal_mode["<C-left>"] = false
 lvim.keys.normal_mode["<C-right>"] = false
+lvim.lsp.installer.setup.automatic_installation = false
 
 vim.opt.mouse = ""
 lvim.builtin.project.manual_mode = true
