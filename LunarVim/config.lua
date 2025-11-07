@@ -11,5 +11,7 @@ lvim.lsp.installer.setup.automatic_installation = false
 
 vim.opt.mouse = ""
 lvim.builtin.project.manual_mode = true
-
 vim.opt.wildmode = "list:longest"
+
+vim.opt.splitbelow = false
+vim.opt.splitright = true
